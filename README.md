@@ -51,7 +51,7 @@ tailwindcss
 jspdf & html2canvas
 
 Functionalities : 
-
+1.Full Responsible for Desktop, Mobile, tablet
 1.State Management are done by using the Context API method.
 2.Authentication is done by using JWT.
 3.Prescription can be created by logged in doctor, and have the ability to edit , print, see prescription history.

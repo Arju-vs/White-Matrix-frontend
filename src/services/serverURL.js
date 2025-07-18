@@ -1,3 +1,3 @@
-const serverURL = "http://localhost:3000"
+const serverURL = "https://white-matrix-backend.onrender.com"
 
 export default serverURL
