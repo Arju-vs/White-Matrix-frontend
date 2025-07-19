@@ -66,8 +66,8 @@ const Login = ({insideRegister}) => {
             sessionStorage.setItem("token", result.data.token)
             setTimeout(()=>{
               const name = result.data.user.fName.trim().split(" ")[0]
-              toast.success(`Welcome Dr. ${name}`)
               setUserResponse(result.data.user)
+              toast.success(`Welcome Dr. ${name}`)
               navigate('/dashboard/mainPage')
               setInputDetails({email:"", password:""})
             },1000)
@@ -121,14 +121,14 @@ const Login = ({insideRegister}) => {
             <div className='flex justify-center mt-5 font-extrabold text-lg'>
               {insideRegister ? (
                 <div className='flex flex-col items-center w-full'>
-                  <button onClick={handleRegister} className='bg-blue-600 px-8 lg:px-[50px] py-1 rounded-full cursor-pointer w-full max-w-[200px]'>Sign Up</button> 
+                  <button onClick={handleRegister} className='bg-blue-600 px-8 lg:px-[50px] py-1 rounded-full cursor-pointer w-full max-w-[200px] hover:text-black'>Sign Up</button> 
                   <h2 className='text-sm lg:text-[16px] mt-2 text-white/80 text-center'>
                     Already a member, <Link to={'/login'} className='font-bold text-black underline hover:text-white'> Log In</Link>
                   </h2>
                 </div>
               ) : (
                 <div className='flex flex-col items-center w-full'>
-                  <button onClick={handleLogin} className='bg-blue-600 px-8 lg:px-[50px] py-1 rounded-full cursor-pointer w-full max-w-[200px]'>Log In</button>
+                  <button onClick={handleLogin} className='bg-blue-600 px-8 lg:px-[50px] py-1 rounded-full cursor-pointer w-full max-w-[200px] hover:text-black'>Log In</button>
                   <h2 className='text-sm lg:text-[16px] mt-2 text-white/80 text-center'>Not a member, <Link to={'/register'} className='font-bold text-black underline hover:text-white'> Sign Up</Link>
                   </h2>
                 </div>

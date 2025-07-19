@@ -8,7 +8,7 @@ const MyPrescription = () => {
 
   return (
     <div className="p-4 md:p-10 bg-blue-200 w-full min-h-screen">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center mt-5 md:mt-20 sm:mt-20 text-blue-700">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center mt-15 md:mt-20 sm:mt-10 text-blue-700">
         My Prescriptions
       </h2>
       

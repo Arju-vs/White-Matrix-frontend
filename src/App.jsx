@@ -9,13 +9,10 @@ import MyPrescriptionPage from './pages/MyPrescription'
 import PreviewPage from './pages/Preview'
 import './App.css'
 import{ Toaster } from 'react-hot-toast';
-import { tokenAuth } from './contexts/TokenProvider'
-import { useContext } from 'react'
 import Pnf from './pages/Pnf'
+import PrivateRoute from './components/protectRoute'
 
 function App() {
-
-  const { authorisedUser, setAuthorisedUser } = useContext(tokenAuth)
 
   return (
     <>
@@ -24,18 +21,18 @@ function App() {
         <Route path={'/login'} element={ <LoginPage />} />
         <Route path={'/register'} element={ <LoginPage insideRegister = {true}/> } />
         {/* dashboard */}
-        { authorisedUser &&
           <>
-          <Route path={'/dashboard'} element={ <DashLayout/> }>
-          <Route path={'mainPage'} element={ <DashboardPage/> } />
-          <Route path={'newpres'} element={ <NewPrescriptionPage/> } />
-          <Route path={'editpres/:id'} element={ <EditPrescriptionPage/> } />
-          <Route path={'mypres'} element={ <MyPrescriptionPage/> } />
-          <Route path={'preview/:id'} element={ <PreviewPage/> } />
+          <Route element={<PrivateRoute />}>
+          <Route path="/dashboard" element={<DashLayout />}>
+            <Route path="mainPage" element={<DashboardPage />} />
+            <Route path="newpres" element={<NewPrescriptionPage />} />
+            <Route path="editpres/:id" element={<EditPrescriptionPage />} />
+            <Route path="mypres" element={<MyPrescriptionPage />} />
+            <Route path="preview/:id" element={<PreviewPage />} />
           </Route>
+        </Route>
         </>
-        }
-        <Route path='/*' element={<Pnf />} />
+        <Route path='*' element={<Pnf />} />
       </Routes>
       <Toaster />
     </>

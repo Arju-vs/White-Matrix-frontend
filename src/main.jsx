@@ -5,11 +5,10 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthProvider.jsx'
 import {PresProvider} from './contexts/PresProvider.jsx'
-import TokenProvider from './contexts/TokenProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <TokenProvider>
+
       <AuthProvider>
         <PresProvider>
           <BrowserRouter>
@@ -17,6 +16,5 @@ createRoot(document.getElementById('root')).render(
           </BrowserRouter>
         </PresProvider>
       </AuthProvider>
-    </TokenProvider>
   </StrictMode>,
 )

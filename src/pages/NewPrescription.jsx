@@ -121,7 +121,6 @@ const NewPrescription = () => {
     }
   };
 
-
   useEffect(()=>{
     const timer = setTimeout(handleSuggestions, 400)
     return () => clearTimeout(timer)
@@ -129,11 +128,11 @@ const NewPrescription = () => {
 
   return (
     <>
-      <div className='w-full flex items-center justify-center p-2 md:p-0'>
-      <div className="w-full md:w-[85%] bg-blue-300 p-2 md:p-4 min-h-[600px] mt-4 md:mt-19 sm:mt-24 rounded-2xl mb-3 mx-2 md:ms-50">
-        <h3 className='text-2xl md:text-3xl font-bold text-blue-700 mb-3 md:mb-5 ms-1 mt-2 md:mt-5'>
-          Create Prescription
-        </h3>
+      <div className='w-full flex items-center justify-center p-2 md:p-0 sm-p-20'>
+        <div className="w-full md:w-[85%] bg-blue-300 p-2 md:p-4 min-h-[600px] mt-25 ms:mt-10 pt-10 sm:pt-24 rounded-2xl mb-3 mx-2">
+          <h3 className=' text-2xl md:text-3xl font-bold text-blue-700 mb-3 md:mb-5 ms-1 mt-2 md:mt-5'>
+            Create Prescription
+          </h3>
         <form>
           <h3 className='text-base md:text-lg font-semibold my-2 ms-1'>Patient Details</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
@@ -158,10 +157,10 @@ const NewPrescription = () => {
                   <div className="md:col-span-1 relative">
                     <input name='mName' placeholder='Medicine Name' className='w-full border border-gray-300 bg-white px-3 md:px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400' onChange={(e) => handleMedicineChange(e, index)} value={med.mName} autoComplete='off' required />
                     {selectedIndex === index && suggest.length > 0 && (
-                      <ul className="absolute z-50 bg-white border w-full shadow-md rounded mt-1 max-h-48 overflow-y-auto">
+                      <ul className="absolute bg-white border w-full shadow-md rounded mt-1 max-h-48 overflow-y-auto">
                         {
                         suggest.map((item, i) => (
-                          <li key={i} className="px-3 py-1 md:px-4 md:py-2 hover:bg-blue-100 cursor-pointer text-xs md:text-sm" onClick={()=>{
+                          <li key={i} className=" px-3 py-1 md:px-4 md:py-2 hover:bg-blue-100 cursor-pointer text-xs md:text-sm" onClick={()=>{
                               const updatedMedicines = [...inputDetails.medicines];
                               updatedMedicines[index].mName = item.name;
                               setInputDetails({ ...inputDetails, medicines: updatedMedicines });

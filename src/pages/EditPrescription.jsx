@@ -150,8 +150,8 @@ const EditPrescription = () => {
 
   return (
     <>
-     <div className='w-full flex items-center justify-center pt-24 md:pt-0'>
-        <div className="w-full md:w-[85%] bg-blue-300 p-3 md:p-4 min-h-[600px] mt-2 md:mt-23 rounded-2xl mb-3 mx-2 md:ms-50">
+     <div className='w-full flex items-center justify-center p-2 md:p-0'>
+        <div className="w-full md:w-[85%] bg-blue-300 p-2 md:p-4 min-h-[600px] mt-25 ms:mt-10 pt-10 sm:pt-24 rounded-2xl mb-3 mx-2">
           <h3 className='text-2xl md:text-3xl font-bold text-blue-700 mb-3 md:mb-5 ms-1 mt-2 md:mt-3'>
             Edit Prescription
           </h3>

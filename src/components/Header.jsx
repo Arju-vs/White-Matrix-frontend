@@ -13,7 +13,7 @@ const Header = () => {
           </Link>
         </div>
         <div className='flex flex-col sm:flex-row items-center gap-2 sm:gap-5 mt-2 sm:mt-0'>
-          <Link to='/' className='text-[16px] sm:text-[18px] text-blue-600 hover:text-black'>Home</Link>
+          <Link to='/' className='hidden md:flex text-[16px] sm:text-[18px] text-blue-600 hover:text-black'>Home</Link>
           <Link to='/login' className='border-2 border-white text-white px-6 sm:px-10 py-1 sm:py-2 bg-gradient-to-r from-blue-500 to-blue-900 rounded-full text-lg sm:text-[20px] font-bold hover:text-black hover:border-blue-600 transition' style={{ fontFamily: '"Alumni Sans SC", sans-serif' }}>Login</Link>
         </div>
       </div>

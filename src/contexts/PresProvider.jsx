@@ -1,17 +1,16 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import { getAllPrescriptionsAPI } from '../services/allAPI'
 import toast from 'react-hot-toast'
+import { authContext } from './AuthProvider'
 
 const presContext = createContext()
 
 const PresProvider = ({children}) => {
-
+    const { userResponse } = useContext(authContext)
     const [presResponse, setPresResponse] = useState(null)
     const [refresh, setRefresh] = useState(false)
 
     const handleAllPrescriptions = async () =>{
-      const userId = sessionStorage.getItem("userId");
-      if (!userId) return;
     try {
       const result = await getAllPrescriptionsAPI()
       if(result.data.success){
@@ -24,9 +23,11 @@ const PresProvider = ({children}) => {
     }
   }
 
-  useEffect(()=>{
-    handleAllPrescriptions()
-  },[refresh])
+  useEffect(() => {
+      if (userResponse?._id) { 
+        handleAllPrescriptions()
+      }
+    }, [userResponse, refresh])
 
   return (
     <presContext.Provider value={{presResponse, setPresResponse, setRefresh}}>
