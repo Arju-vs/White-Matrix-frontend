@@ -8,8 +8,8 @@ const DashHeader = () => {
     const { userResponse } = useContext(authContext)
 
   return (
-    <div className='top-2 left-4 fixed w-[98%] h-[70px] bg-blue-300 z-100 shadow-xl/20 shadow-cyan-500/50 rounded-xl'>
-        <div className="flex justify-between items-center mx-5">
+    <div className='fixed top-2 left-3 right-1 w-[98%] h-auto bg-blue-200 z-50 shadow-xl shadow-cyan-500/20 rounded-xl px-4 py-2'>
+      <div className="flex flex-wrap justify-between items-center">
             <div className='flex'>
                 <img src={logo} alt="med-logo" className='w-20 h-15 ms-5' />
                 <Link to={'/dashboard/mainPage'} className='py-3 ps-2 text-[30px] font-bold' style={{fontFamily:'"Alumni Sans SC", sans-serif'}}>med<span className='text-blue-600 text-[27px]'>BOOK</span>!</Link>

@@ -13,9 +13,7 @@ const DashProfile = () => {
     
   return (
     <div className='w-full flex flex-col justify-center items-center'>
-        <span className='w-[90%] bg-blue-800 p-3 mt-5 flex flex-row justify-center text-white text-center text-xl font-bold rounded-2xl shadow'>
-            <CgProfile size={30} className="me-1" /> My Profile
-        </span>
+        <span className='w-[90%] bg-blue-800 p-3 mt-5 flex flex-row justify-center text-white text-center text-xl font-bold rounded-2xl shadow'><CgProfile size={30} className="me-1" />My Profile</span>
         <div className="w-[90%] bg-blue-400 mt-1 p-3 rounded-2xl flex flex-row">
             <img src={profileImg} alt="profile" className="w-25 h-25 ms-5 mt-2" />
             <div className="flex flex-col">
@@ -28,19 +26,16 @@ const DashProfile = () => {
                             <h3 className="font-bold text-sm ps-2 pt-2">Med ID: {userResponse.regNo}</h3>
                         </>
                         :
-                        <div className=""></div>
+                        <div className="">No Info</div>
                 }
             </div>
         </div>
-        <span className='w-[90%] bg-blue-800 p-3 mt-5 flex flex-row justify-center text-white text-center text-xl font-bold rounded-2xl shadow'>
-            <SlCalender size={30} className="me-1 pb-1" /> My Calender
-        </span>
+        <span className='w-[90%] bg-blue-800 p-3 mt-5 flex flex-row justify-center text-white text-center text-xl font-bold rounded-2xl shadow'><SlCalender size={30} className="me-1 pb-1"/> My Calender</span>
         <div className="w-[90%] bg-blue-400 mt-1 p-5 rounded-2xl flex justify-center overflow-hidden">
             <div className="bg-white shadow-lg inline-block">
                 <Calendar onChange={setDate} value={date} />
             </div>
         </div>
-
     </div>
   )
 }
