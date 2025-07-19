@@ -20,7 +20,7 @@ const Landing = () => {
           <div className="flex flex-col items-start p-4 lg:p-10 lg:ms-10 w-full lg:w-1/2">
             <h1 className='text-[30px] sm:text-[40px] md:text-[50px] lg:text-[50px] xl:text-[65px] font-bold mb-[-20px] lg:mb-[-30px] text-blue-600 text-stroke cursor-pointer' style={{fontFamily:'"Alumni Sans SC", sans-serif'}}>Your HEALTH, our PRIORITY!</h1>
             <h2 className='text-[18px] sm:text-[25px] md:text-[30px] lg:text-[35px] xl:text-[30px] sm:mt-2 font-bold self-end pr-2 text-gray-900 cursor-pointer' style={{fontFamily:'"Dancing Script", cursive'}}>- we serve with CARE, for the LIVING </h2>
-            <div className="flex flex-row flex-wrap gap-1 sm:gap-4 self-center mt-5">
+            <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row sm:gap-4 self-center mt-5">
               <img src={brainImg} alt="brain" className='w-16 h-16 sm:w-20 sm:h-20 rounded-full shadow-2xl shadow-cyan-300 cursor-pointer' />
               <img src={lungsImg} alt="lungs" className='w-16 h-16 sm:w-20 sm:h-20 rounded-full shadow-2xl shadow-cyan-300 cursor-pointer' />
               <img src={heartImg} alt="heart" className='w-16 h-16 sm:w-20 sm:h-20 rounded-full shadow-2xl shadow-cyan-300 cursor-pointer' />
