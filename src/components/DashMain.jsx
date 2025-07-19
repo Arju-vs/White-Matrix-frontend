@@ -10,7 +10,7 @@ const DashMain = () => {
     const navigate = useNavigate()
 
     return (
-        <div className='w-full flex flex-col items-center p-2 md:p-0'>
+        <div className='min-w-full flex flex-col items-center p-2 md:p-0'>
             <div className="w-full md:w-[90%] bg-green-500 p-3 md:p-5 mt-2 md:mt-5 rounded-2xl">
                 <div className="flex flex-col md:flex-row justify-center items-center text-center">
                     <div className="w-full md:w-2/3 mb-4 md:mb-0">
