@@ -15,6 +15,7 @@ Code Structure:
 │   ├── DashMain.jsx
 |   ├── DashProfile.jsx
 │   ├── Footer.jsx
+|   └── TokenProvider.jsx
 |
 ├──  App.jsx (defines routes)
 │
@@ -31,7 +32,6 @@ Code Structure:
 ├──  contexts
 │   ├── AuthProvider.jsx
 │   ├── PresProvider.jsx
-│   └── TokenProvider.jsx
 │
 ├──  services
 │   ├── allAPI.js (handles REST + OpenFDA)

@@ -73,10 +73,10 @@ const Preview = () => {
 
   return (
     <div className='w-full min-h-screen bg-blue-200 flex flex-col items-center p-4 pt-24 md:pt-24'>
-      <div className="w-full max-w-[1000px] h-auto md:h-[1300px] p-2 bg-blue-300 rounded-2xl flex flex-col justify-center items-center">
+      <div className="w-full h-[500px] md:h-[1000px] p-2 bg-blue-300 rounded-2xl flex flex-col justify-center items-center">
         <div ref={printRef} id='prescription' className="w-full max-w-[794px] h-[1123px] rounded bg-cover bg-center mx-auto overflow-hidden" style={{backgroundImage:`url(${preBg})`}}>
         <div className="flex h-full w-full">
-          <div className="h-full w-[100px] md:w-[160px] flex-shrink-0 flex flex-col items-center justify-between text-center pt-5 pb-15 m-2 rounded-t-full" style={{backgroundColor:'#60A5FA'}}>
+          <div className="w-[100px] md:w-[160px] flex flex-col items-center justify-between text-center pt-5 pb-15 m-2 rounded-t-full" style={{backgroundColor:'#60A5FA'}}>
           <div>
             <img src={logo} alt="" className='w-23 mx-auto' />
             <h3 className='text-xl md:text-2xl mt-2' style={{color:'#FFFFFFB3'}}>MedBook</h3>

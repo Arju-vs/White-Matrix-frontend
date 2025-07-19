@@ -10,7 +10,7 @@ import PreviewPage from './pages/Preview'
 import './App.css'
 import{ Toaster } from 'react-hot-toast';
 import Pnf from './pages/Pnf'
-import PrivateRoute from './components/protectRoute'
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
 
