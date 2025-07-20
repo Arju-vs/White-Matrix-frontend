@@ -5,6 +5,12 @@ Project Name : MedBook - Doctor's prescription Management
 Overview:
 MedBook is a full-stack web application designed for doctors to easily create, manage, and review patients prescriptions. It features a modern dashboard, doctor profile, patient form, medicine recommentations via OpenFDA free API, preview page, edit patient form, and print option is also implemented. 
 
+To run this locally: 
+    1. Clone the git repositories
+    2. Create a .env file with mongoDB url and jwtpassword
+    3. To start backend - nodemon index.js / nodemon
+    4. To start frontend - npm run dev 
+
 Code Structure: 
 |src/
 ├──  components
